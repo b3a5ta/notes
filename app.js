@@ -67,39 +67,6 @@ class NotesApp {
         localStorage.setItem('notesAppGitHubConfig', JSON.stringify(this.githubConfig));
     }
     
-    // Sample Data
-    loadSampleData() {
-        const sampleNotes = [
-            {
-                id: "1",
-                title: "Getting Started with the Notes App",
-                content: "# Welcome to Your Personal Notes App\n\nThis is a modern notes application with the following features:\n\n## Key Features\n- **Markdown Support**: Write notes in markdown with live preview\n- **Tagging System**: Organize notes with tags\n- **Search**: Find notes quickly\n- **Dark Mode**: Toggle between light and dark themes\n- **Excel Storage**: Notes are saved in Excel format\n- **GitHub Sync**: Backup your notes to GitHub\n\n## Getting Started\n1. Create a new note using the \"New Note\" button\n2. Write your content in markdown\n3. Add tags to organize your notes\n4. Use the search bar to find specific notes\n\n*Happy note-taking!*",
-                tags: ["getting-started", "tutorial", "features"],
-                createdAt: new Date("2025-08-09T14:00:00.000Z"),
-                updatedAt: new Date("2025-08-09T14:00:00.000Z")
-            },
-            {
-                id: "2", 
-                title: "Markdown Syntax Guide",
-                content: "# Markdown Quick Reference\n\n## Headers\n```markdown\n# H1 Header\n## H2 Header\n### H3 Header\n```\n\n## Text Formatting\n- **Bold text**\n- *Italic text*\n- `Inline code`\n\n## Lists\n### Unordered List\n- Item 1\n- Item 2\n- Item 3\n\n### Ordered List\n1. First item\n2. Second item\n3. Third item\n\n## Links and Images\n[Link text](https://example.com)\n![Alt text](image-url)\n\n## Code Blocks\n```javascript\nfunction hello() {\n  console.log('Hello World!');\n}\n```\n\n> This is a blockquote\n\n---\n\n*Use these syntax elements to format your notes beautifully!*",
-                tags: ["markdown", "reference", "syntax", "tutorial"],
-                createdAt: new Date("2025-08-09T14:05:00.000Z"), 
-                updatedAt: new Date("2025-08-09T14:05:00.000Z")
-            },
-            {
-                id: "3",
-                title: "Project Ideas",
-                content: "# Project Ideas for Development\n\n## Web Applications\n- [ ] Personal dashboard\n- [ ] Task management system  \n- [ ] Weather app with location services\n- [ ] Recipe organizer\n\n## Mobile Apps\n- [ ] Habit tracker\n- [ ] Expense tracker\n- [ ] Fitness app\n\n## Desktop Applications\n- [ ] File organizer\n- [ ] Password manager\n- [ ] Screenshot tool\n\n## Learning Goals\n1. Master React hooks\n2. Learn Node.js backends\n3. Understand database design\n4. Practice responsive design\n\n**Priority**: Focus on web applications first, then expand to mobile development.",
-                tags: ["projects", "ideas", "development", "todo"],
-                createdAt: new Date("2025-08-09T14:10:00.000Z"),
-                updatedAt: new Date("2025-08-09T14:15:00.000Z")
-            }
-        ];
-        
-        this.notes = sampleNotes;
-        this.updateAllTags();
-    }
-    
     // Event Listeners
     setupEventListeners() {
         // Theme toggle
